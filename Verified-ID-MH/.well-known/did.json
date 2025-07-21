@@ -1,0 +1,48 @@
+{
+  "id": "did:web:did.azuremark.co",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:did.azuremark.co"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://did.azuremark.co/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/832f3c46-451e-4bec-8d10-7704d6e3b76f"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#0573f0229c5c4843828ae045f5011a6evcSigningKey-03bfc",
+      "controller": "did:web:did.azuremark.co",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "rTuOzFRiuG1Jd9F6YmZvU4mC-VBwb414JtDyuzBncO4",
+        "y": "DnNrx275SzFvTKf360nbes8Fy859YydcS3KNYjhzeJI"
+      }
+    }
+  ],
+  "authentication": [
+    "#0573f0229c5c4843828ae045f5011a6evcSigningKey-03bfc"
+  ],
+  "assertionMethod": [
+    "#0573f0229c5c4843828ae045f5011a6evcSigningKey-03bfc"
+  ]
+}
